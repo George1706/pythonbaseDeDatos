@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>formulario</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>formulario Productos </h1>
+    
+    <form method="POST" cation="">
+        {{ form.hidden_tag()}}
+        <p>
+            {{ form.nombre.label}}
+            {{ form.nombre(size = 32)}}
+        </p>
+
+        <p>
+            {{ form.precio.label}}
+            {{ form.precio(size=32)}}
+        </p>
+       
+            {{ form.submit()}}
+       
+        
+    
+  </body>
+</html>
