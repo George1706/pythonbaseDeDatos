@@ -6,6 +6,8 @@ from .config import Config
 from flask_sqlalchemy import SQLAlchemy
 #dependencia para las migraciones 
 from flask_migrate import Migrate
+from .mi_blueprint import mi_blueprint
+from app.products import products
 
 
 
@@ -14,6 +16,10 @@ app = Flask(__name__)
 
 #Configuracion objeto flask
 app.config.from_object(Config)
+
+#vincular blueprints del proyecto 
+app.register_blueprint(mi_blueprint)
+app.register_blueprint(products)
 
 #Crear el objetto de Moldelos
 db = SQLAlchemy(app)
